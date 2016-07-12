@@ -64,7 +64,7 @@ We are going to do a simple POST via CURL
 First:
 `rake db:migrate`
 Then:
-`curl -H "Content-Type: application/json" -X POST -d '{"language": {"name":"ruby","answer":"A syntactically beautiful class based language"}}' http://localhost:3000/languages`
+`curl -H "Content-Type: application/json" -X POST -d '{"language": {"name":"ruby","description":"A syntactically beautiful class based language"}}' http://localhost:3000/languages`
 
 ## Be Kind: Version Control your API
 
