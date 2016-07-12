@@ -104,7 +104,7 @@ gem 'rack-cors', :require => 'rack/cors'
 
 `bundle`
 
-Then we need to configure our app to specify what we want to allow from where:
+Then we need to configure our app to specify what we want to allow from where. Here we are allowing requests from any domain for any resource, but only GET and POST methods. These can be altered. You can also restrict the origins and resources you would like to be public. 
 
 ```ruby
 # config/application.rb
@@ -112,7 +112,7 @@ config.middleware.insert_before 0, "Rack::Cors", :debug => true, :logger => (-> 
       allow do
         origins '*'
 
-        resource 'api/v1/languages',
+        resource '*',
           :headers => :any,
           :methods => [:get, :post]
 
